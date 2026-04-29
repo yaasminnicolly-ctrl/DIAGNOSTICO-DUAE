@@ -5,54 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DUAE | Diagnóstico</title>
 
-    <!-- FONTES -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Tenor+Sans&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main id="app">
 
-        <!-- INTRO -->
-        <section id="step-intro" class="step active">
-            <h1 class="premium-title">DUAE</h1>
-            <p class="body-text">Inicie seu diagnóstico editorial e estratégico.</p>
-            <button class="btn-primary" onclick="nextStep('step-q1')">Começar</button>
-        </section>
+<main id="app">
 
-        <!-- PERGUNTA -->
-        <section id="step-q1" class="step">
-            <span class="label">Pergunta 01</span>
-            <h2 class="question-text">Qual o foco principal da sua marca hoje?</h2>
+    <!-- INTRO -->
+    <section id="step-intro" class="step active">
+        <h1 class="premium-title">DUAE</h1>
+        <p class="body-text">Inicie seu diagnóstico editorial e estratégico.</p>
+        <button class="btn-primary" onclick="nextStep('step-q1')">Começar</button>
+    </section>
 
-            <div class="input-wrapper">
-                <input type="text" id="ans-q1" placeholder="Sua resposta..." autocomplete="off">
-            </div>
+    <!-- PERGUNTA -->
+    <section id="step-q1" class="step">
+        <span class="label">Pergunta 01</span>
+        <h2 class="question-text">Qual o foco principal da sua marca hoje?</h2>
 
-            <button class="btn-primary" onclick="showLoading()">Finalizar Diagnóstico</button>
-        </section>
+        <div class="input-wrapper">
+            <input type="text" id="ans-q1" placeholder="Sua resposta..." autocomplete="off">
+        </div>
 
-        <!-- RESULTADO -->
-        <section id="step-result" class="step">
-            <h2 class="premium-title">Seu diagnóstico</h2>
+        <button class="btn-primary" onclick="showLoading(this)">Finalizar Diagnóstico</button>
+    </section>
 
-            <div class="divider"></div>
+    <!-- RESULTADO -->
+    <section id="step-result" class="step">
+        <h2 class="premium-title">Seu diagnóstico</h2>
 
-            <p id="result-type" class="result-highlight"></p>
+        <div class="divider"></div>
 
-            <div class="divider"></div>
+        <p id="result-type" class="result-highlight"></p>
 
-            <p class="body-text" style="margin-bottom: 2rem;">
-                Sua marca está pronta para o próximo nível editorial.
-            </p>
+        <div class="divider"></div>
 
-            <button class="btn-primary" onclick="goToWhatsApp()">
-                Falar no WhatsApp
-            </button>
-        </section>
+        <p class="body-text" style="margin-bottom: 2rem;">
+            Sua marca está pronta para o próximo nível editorial.
+        </p>
 
-    </main>
+        <button class="btn-primary" onclick="goToWhatsApp()">
+            Falar no WhatsApp
+        </button>
+    </section>
 
-    <script src="script.js"></script>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
