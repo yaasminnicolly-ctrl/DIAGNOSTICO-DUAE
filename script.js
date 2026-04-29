@@ -1,13 +1,9 @@
 function nextStep(stepId) {
     document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-
-    setTimeout(() => {
-        document.getElementById(stepId).classList.add('active');
-    }, 100);
+    document.getElementById(stepId).classList.add('active');
 }
 
-function showLoading() {
-    const btn = event.target;
+function showLoading(btn) {
     const input = document.getElementById("ans-q1").value.trim();
 
     if (!input) {
@@ -17,17 +13,14 @@ function showLoading() {
 
     btn.innerText = "ANALISANDO...";
     btn.disabled = true;
-    btn.style.opacity = "0.5";
 
     setTimeout(() => {
         generateResult(input);
         nextStep('step-result');
-    }, 1800);
+    }, 1500);
 }
 
 function generateResult(input) {
-    const resultElement = document.getElementById("result-type");
-
     let result;
 
     if (input.length < 20) {
@@ -38,7 +31,7 @@ function generateResult(input) {
         result = "MASTER DIRECTION";
     }
 
-    resultElement.innerText = result;
+    document.getElementById("result-type").innerText = result;
 }
 
 function goToWhatsApp() {
@@ -49,6 +42,5 @@ function goToWhatsApp() {
     );
 
     const url = https://wa.me/5511983013177?text=${message};
-
     window.open(url, "_blank");
 }
